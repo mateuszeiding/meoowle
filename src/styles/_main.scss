@@ -1,0 +1,22 @@
+@use "variables/variables";
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--#{variables.$prefix}body-bg);
+    color: var(--#{variables.$prefix}body-color-primary);
+    font-family: 'Fira Code', monospace;
+    line-height: 1.5;
+    font-size: 1.6rem;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}

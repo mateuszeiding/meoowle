@@ -1,0 +1,47 @@
+@use "../variables/fonts";
+
+@each $key, $value in fonts.$font-size {
+    .fs-#{$key} {
+        font-size: $value !important;
+    }
+}
+
+@each $key, $value in fonts.$font-weight {
+    .fw-#{$key} {
+        font-weight: $value !important;
+    }
+}
+
+@each $key, $value in fonts.$line-height {
+    .lh-#{$key} {
+        line-height: $value !important;
+    }
+}
+
+.tx-uppercase {
+    text-transform: uppercase !important;
+}
+
+.tx-lowercase {
+    text-transform: lowercase !important;
+}
+
+.tx-capitalize {
+    text-transform: capitalize !important;
+}
+
+.tx-right {
+    text-align: right !important;
+}
+
+.tx-center {
+    text-align: center !important;
+}
+
+.tx-left {
+    text-align: left !important;
+}
+
+.tx-justify {
+    text-align: justify !important;
+}

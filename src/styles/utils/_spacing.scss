@@ -1,0 +1,61 @@
+@use "../variables/spacing";
+
+:root {
+    @each $key, $value in spacing.$spacers {
+        .m-#{$key} {
+            margin: #{$value}rem;
+        }
+        .mt-#{$key} {
+            margin-top: #{$value}rem;
+        }
+        .mr-#{$key} {
+            margin-right: #{$value}rem;
+        }
+        .mb-#{$key} {
+            margin-bottom: #{$value}rem;
+        }
+        .ml-#{$key} {
+            margin-left: #{$value}rem;
+        }
+        .mx-#{$key} {
+            margin-left: #{$value}rem;
+            margin-right: #{$value}rem;
+        }
+        .my-#{$key} {
+            margin-top: #{$value}rem;
+            margin-bottom: #{$value}rem;
+        }
+        .p-#{$key} {
+            padding: #{$value}rem;
+        }
+        .pt-#{$key} {
+            padding-top: #{$value}rem;
+        }
+        .pr-#{$key} {
+            padding-right: #{$value}rem;
+        }
+        .pb-#{$key} {
+            padding-bottom: #{$value}rem;
+        }
+        .pl-#{$key} {
+            padding-left: #{$value}rem;
+        }
+        .px-#{$key} {
+            padding-left: #{$value}rem;
+            padding-right: #{$value}rem;
+        }
+        .py-#{$key} {
+            padding-top: #{$value}rem;
+            padding-bottom: #{$value}rem;
+        }
+        .g-#{$key} {
+            gap: #{$value}rem;
+        }
+        .g-col-#{$key} {
+            column-gap: #{$value}rem;
+        }
+        .g-row-#{$key} {
+            row-gap: #{$value}rem;
+        }
+    }
+}

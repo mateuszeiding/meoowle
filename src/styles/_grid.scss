@@ -1,0 +1,20 @@
+@use "variables/variables";
+
+.grid-main {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 4.8rem);
+
+    --#{variables.$prefix}menu-width: 24rem;
+
+    .grid-menu {
+        display: flex;
+        flex-direction: column;
+        min-width: var(--#{variables.$prefix}menu-width);
+        width: var(--#{variables.$prefix}menu-width);
+        background-color: var(--#{variables.$prefix}gray-100);
+        padding: 1.6rem;
+        padding-bottom: 3.2rem;
+        border-right: 1px solid var(--#{variables.$prefix}border-color);
+    }
+}

@@ -1,0 +1,109 @@
+@use "../variables/variables";
+
+.btn {
+    --default-border-color: var(--#{variables.$prefix}border-color-light);
+    --default-shadow-border-color: var(--#{variables.$prefix}border-color);
+    --hover-border-color: var(--#{variables.$prefix}border-color-light-hover);
+    --hover-shadow-border-color: var(--#{variables.$prefix}border-color-light);
+    --active-border-color: var(--#{variables.$prefix}gray-700);
+    --active-shadow-border-color: var(--#{variables.$prefix}gray-600);
+    display: block;
+    padding: 0.8rem 1.2rem;
+    color: var(--#{variables.$prefix}body-color-secondary);
+    border: 4px solid var(--default-border-color);
+    border-top: 2px solid var(--default-border-color);
+    border-radius: 0.8rem;
+    background-color: var(--#{variables.$prefix}gray-200);
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        all 300ms ease-in-out,
+        top 50ms ease-in-out;
+
+    position: relative;
+    top: 0;
+
+    box-shadow:
+        0 0.6rem var(--default-shadow-border-color),
+        0 1.4rem rgba(0, 0, 0, 0.4);
+
+    &:not(:disabled) {
+        &:hover {
+            background-color: var(--#{variables.$prefix}gray-300);
+            border-color: var(--hover-border-color);
+            box-shadow:
+                0 0.6rem var(--hover-shadow-border-color),
+                0 0.8rem rgba(0, 0, 0, 0.4);
+        }
+
+        &:focus-visible {
+            outline: lightblue solid 4px;
+            border-color: var(--#{variables.$prefix}gray-400);
+        }
+
+        &:hover,
+        &:active {
+            color: var(--#{variables.$prefix}body-color-primary);
+        }
+
+        &.active,
+        &:active {
+            top: 0.4rem;
+            border-color: var(--active-border-color);
+            box-shadow:
+                0 0.6rem var(--active-shadow-border-color),
+                0 0.2rem rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &-link {
+        color: var(--#{variables.$prefix}body-color-secondary);
+        text-decoration: none;
+    }
+
+    &-justified {
+        width: 100%;
+    }
+
+    &:disabled,
+    [disabled] {
+        cursor: not-allowed;
+        background-color: var(--#{variables.$prefix}gray-400);
+        border-color: var(--#{variables.$prefix}gray-500);
+        color: var(--#{variables.$prefix}gray-600);
+        box-shadow:
+            0 0.6rem var(--#{variables.$prefix}gray-600),
+            0 1.4rem rgba(0, 0, 0, 0.4);
+        transition: all 300ms ease-in-out;
+    }
+
+    &.theme {
+        &-red {
+            --default-border-color: var(--#{variables.$prefix}red-700);
+            --default-shadow-border-color: var(--#{variables.$prefix}red-900);
+            --hover-border-color: var(--#{variables.$prefix}red-600);
+            --hover-shadow-border-color: var(--#{variables.$prefix}red-800);
+            --active-border-color: var(--#{variables.$prefix}red-400);
+            --active-shadow-border-color: var(--#{variables.$prefix}red-600);
+        }
+
+        &-blue {
+            --default-border-color: var(--#{variables.$prefix}blue-700);
+            --default-shadow-border-color: var(--#{variables.$prefix}blue-900);
+            --hover-border-color: var(--#{variables.$prefix}blue-600);
+            --hover-shadow-border-color: var(--#{variables.$prefix}blue-800);
+            --active-border-color: var(--#{variables.$prefix}blue-400);
+            --active-shadow-border-color: var(--#{variables.$prefix}blue-600);
+        }
+
+        &-green {
+            --default-border-color: var(--#{variables.$prefix}green-700);
+            --default-shadow-border-color: var(--#{variables.$prefix}green-900);
+            --hover-border-color: var(--#{variables.$prefix}green-600);
+            --hover-shadow-border-color: var(--#{variables.$prefix}green-800);
+            --active-border-color: var(--#{variables.$prefix}green-400);
+            --active-shadow-border-color: var(--#{variables.$prefix}green-600);
+        }
+    }
+}

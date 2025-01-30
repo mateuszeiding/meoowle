@@ -1,0 +1,17 @@
+@use "../../variables/variables";
+
+%label {
+    color: var(--#{variables.$prefix}body-color-primary);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form-check-label {
+    @extend %label;
+    font-size: 1.4rem;
+}
+
+.form-label {
+    @extend %label;
+    font-size: 1.6rem;
+}

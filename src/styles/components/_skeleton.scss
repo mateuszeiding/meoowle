@@ -1,0 +1,41 @@
+@use "../variables/variables";
+
+.skeleton {
+    position: relative;
+    background-color: var(--#{variables.$prefix}gray-400);
+    overflow: hidden;
+
+    &::after {
+        top: 0;
+        left: -120%;
+        right: 120%;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        animation-duration: 1000ms;
+        animation-name: spooky-skeleton-dancing-in-the-dark;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        background: linear-gradient(
+            to right,
+            var(--#{variables.$prefix}gray-400) 00%,
+            var(--#{variables.$prefix}gray-600) 45%,
+            var(--#{variables.$prefix}gray-600) 55%,
+            var(--#{variables.$prefix}gray-400) 100%
+        );
+        opacity: 0.4;
+    }
+
+    &-text {
+        color: transparent;
+        speak: none;
+        display: inline-table;
+    }
+}
+
+@keyframes spooky-skeleton-dancing-in-the-dark {
+    to {
+        left: 120%;
+        right: -120%;
+    }
+}

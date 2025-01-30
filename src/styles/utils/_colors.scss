@@ -1,0 +1,14 @@
+@use "../variables/colors";
+@use "../variables/variables";
+
+@each $value in colors.$grays {
+    .text-#{$value} {
+        color: var(--#{variables.$prefix}#{$value});
+    }
+}
+
+@each $value in colors.$grays {
+    .bg-#{$value} {
+        background-color: var(--#{variables.$prefix}#{$value});
+    }
+}
