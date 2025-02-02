@@ -2,7 +2,9 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@Form*": ["src/lib/Form/!Form.import.ts"]
+			"@Form": ["src/lib/Form/!Form.import.ts"],
+			"@Util": ["src/lib/Util/!Util.import.ts"],
+			"@Nav": ["src/lib/Nav/!Nav.import.ts"]
 		},
 		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
 		"target": "ES2020",

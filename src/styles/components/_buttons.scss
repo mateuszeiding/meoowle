@@ -1,4 +1,4 @@
-@use "../variables/variables";
+@use '../variables/variables';
 
 .btn {
     --default-border-color: var(--#{variables.$prefix}border-color-light);
@@ -6,6 +6,7 @@
     --hover-border-color: var(--#{variables.$prefix}border-color-light-hover);
     --hover-shadow-border-color: var(--#{variables.$prefix}border-color-light);
     --active-border-color: var(--#{variables.$prefix}gray-700);
+    --active-bg-color: var(--#{variables.$prefix}gray-000);
     --active-shadow-border-color: var(--#{variables.$prefix}gray-600);
     display: block;
     padding: 0.8rem 1.2rem;
@@ -13,12 +14,12 @@
     border: 4px solid var(--default-border-color);
     border-top: 2px solid var(--default-border-color);
     border-radius: 0.8rem;
-    background-color: var(--#{variables.$prefix}gray-200);
+    background-color: var(--#{variables.$prefix}gray-100);
     text-align: center;
     font-weight: 500;
     cursor: pointer;
     transition:
-        all 300ms ease-in-out,
+        all 200ms ease-in-out,
         top 50ms ease-in-out;
 
     position: relative;
@@ -30,7 +31,7 @@
 
     &:not(:disabled) {
         &:hover {
-            background-color: var(--#{variables.$prefix}gray-300);
+            background-color: var(--#{variables.$prefix}gray-100);
             border-color: var(--hover-border-color);
             box-shadow:
                 0 0.6rem var(--hover-shadow-border-color),
@@ -50,6 +51,7 @@
         &.active,
         &:active {
             top: 0.4rem;
+            background-color: var(--active-bg-color);
             border-color: var(--active-border-color);
             box-shadow:
                 0 0.6rem var(--active-shadow-border-color),
@@ -85,6 +87,7 @@
             --hover-border-color: var(--#{variables.$prefix}red-600);
             --hover-shadow-border-color: var(--#{variables.$prefix}red-800);
             --active-border-color: var(--#{variables.$prefix}red-400);
+            --active-bg-color: var(--#{variables.$prefix}red-000);
             --active-shadow-border-color: var(--#{variables.$prefix}red-600);
         }
 
@@ -94,6 +97,7 @@
             --hover-border-color: var(--#{variables.$prefix}blue-600);
             --hover-shadow-border-color: var(--#{variables.$prefix}blue-800);
             --active-border-color: var(--#{variables.$prefix}blue-400);
+            --active-bg-color: var(--#{variables.$prefix}blue-000);
             --active-shadow-border-color: var(--#{variables.$prefix}blue-600);
         }
 
@@ -103,6 +107,7 @@
             --hover-border-color: var(--#{variables.$prefix}green-600);
             --hover-shadow-border-color: var(--#{variables.$prefix}green-800);
             --active-border-color: var(--#{variables.$prefix}green-400);
+            --active-bg-color: var(--#{variables.$prefix}green-000);
             --active-shadow-border-color: var(--#{variables.$prefix}green-600);
         }
     }

@@ -7,6 +7,8 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			"@Form": path.resolve(__dirname, "./src/lib/Form/!Form.import.ts"),
+			"@Util": path.resolve(__dirname, "./src/lib/Util/!Util.import.ts"),
+			"@Nav": path.resolve(__dirname, "./src/lib/Nav/!Nav.import.ts"),
 		},
 	},
 });
