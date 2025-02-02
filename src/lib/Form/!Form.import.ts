@@ -1,2 +1,2 @@
-export { default as RadioInput } from "./Radio.input";
-export { default as SwitchInput } from "./Switch.input";
+export { default as RadioInput } from "./components/Radio.input";
+export { default as SwitchInput } from "./components/Switch.input";
