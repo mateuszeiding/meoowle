@@ -11,10 +11,23 @@ export default function App() {
 				<div className="row">
 					<div className="col-12">
 						<RadioInput />
-						<SwitchInput />
+					</div>
+
+					<div className="col-12">
+						<SwitchInput theme="blue" />
 						<SwitchInput theme="blue" thirdDimension />
+					</div>
+					<div className="col-12">
 						<SwitchInput theme="green" />
+						<SwitchInput theme="green" thirdDimension />
+					</div>
+					<div className="col-12">
 						<SwitchInput theme="red" />
+						<SwitchInput theme="red" thirdDimension />
+					</div>
+					<div className="col-12">
+						<SwitchInput />
+						<SwitchInput thirdDimension />
 					</div>
 				</div>
 			</section>

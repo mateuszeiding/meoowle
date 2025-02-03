@@ -3,39 +3,39 @@
 .form-switch {
     &.third-dimension {
         .form-check-input {
-            height: 3.4rem;
-            width: 6rem;
+            height: 2.8rem;
+            width: 4.8rem;
             border: 4px solid var(--#{prefix}border-color);
             border-top: 4px solid var(--#{prefix}border-color);
             box-shadow:
                 inset 0 4px var(--#{prefix}shadow-border-color),
-                inset 0 10px rgba(0, 0, 0, 0.4);
+                inset 0 8px rgba(0, 0, 0, 0.4);
 
             &::before {
-                top: 0.2rem;
+                top: 0rem;
                 left: 0.2rem;
                 width: 1.6rem;
                 height: 1.6rem;
                 box-shadow:
-                    0 4px var(--#{prefix}shadow-border-color),
+                    0 4px var(--#{prefix}switch-side-color),
                     0 6px rgba(0, 0, 0, 0.4);
             }
 
             &:hover::before {
-                top: 0.4rem;
+                top: 0.2rem;
                 left: 0.2rem;
                 width: 1.6rem;
                 height: 1.6rem;
                 border-radius: 0.4rem;
                 box-shadow:
-                    0 2px var(--#{prefix}shadow-border-color),
+                    0 2px var(--#{prefix}switch-side-color),
                     0 4px rgba(0, 0, 0, 0.4);
             }
 
             &:checked {
                 &::before,
                 &:hover::before {
-                    left: 3.2rem;
+                    left: 2.2rem;
                 }
             }
 
@@ -43,21 +43,43 @@
                 &-default {
                     --#{prefix}border-color: var(--#{$prefix}gray-800);
                     --#{prefix}shadow-border-color: var(--#{$prefix}gray-900);
+                    --#{prefix}switch-side-color: var(--#{$prefix}gray-700);
+
+                    &:hover {
+                        --#{prefix}switch-side-color: var(--#{$prefix}gray-600);
+                    }
                 }
 
                 &-blue {
                     --#{prefix}border-color: var(--#{$prefix}blue-800);
                     --#{prefix}shadow-border-color: var(--#{$prefix}blue-900);
+                    --#{prefix}switch-side-color: var(--#{$prefix}blue-500);
+
+                    &:hover {
+                        --#{prefix}switch-side-color: var(--#{$prefix}blue-400);
+                    }
                 }
 
                 &-green {
                     --#{prefix}border-color: var(--#{$prefix}green-800);
                     --#{prefix}shadow-border-color: var(--#{$prefix}green-900);
+                    --#{prefix}switch-side-color: var(--#{$prefix}green-500);
+
+                    &:hover {
+                        --#{prefix}switch-side-color: var(
+                            --#{$prefix}green-400
+                        );
+                    }
                 }
 
                 &-red {
                     --#{prefix}border-color: var(--#{$prefix}red-800);
                     --#{prefix}shadow-border-color: var(--#{$prefix}red-900);
+                    --#{prefix}switch-side-color: var(--#{$prefix}red-500);
+
+                    &:hover {
+                        --#{prefix}switch-side-color: var(--#{$prefix}red-400);
+                    }
                 }
             }
         }
