@@ -12,7 +12,7 @@ export default function App() {
 					<div className="col-12">
 						<RadioInput />
 						<SwitchInput />
-						<SwitchInput theme="blue" />
+						<SwitchInput theme="blue" thirdDimension />
 						<SwitchInput theme="green" />
 						<SwitchInput theme="red" />
 					</div>
