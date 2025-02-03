@@ -1,0 +1,65 @@
+@use '/src/config/scss/variables/variables.scss' as *;
+
+.form-switch {
+    .form-check-input {
+        appearance: none;
+        cursor: pointer;
+        position: relative;
+        height: 2.4rem;
+        width: 4rem;
+        border-radius: 0.6rem;
+        background-color: var(--#{prefix}track-bg);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0.4rem;
+            left: 0.4rem;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 0.4rem;
+            background-color: var(--#{prefix}switch-bg);
+            transition: left 0.15s ease-in-out;
+        }
+
+        &:checked {
+            background-color: var(--#{prefix}track-bg-checked);
+
+            &::before {
+                transition: left 0.15s ease-in-out;
+                left: 2rem;
+                background-color: var(--#{prefix}switch-bg-checked);
+            }
+        }
+
+        &.theme {
+            &-default {
+                --#{prefix}track-bg: var(--#{$prefix}gray-200);
+                --#{prefix}switch-bg: var(--#{$prefix}gray-500);
+                --#{prefix}track-bg-checked: var(--#{$prefix}gray-500);
+                --#{prefix}switch-bg-checked: var(--#{$prefix}gray-200);
+            }
+
+            &-blue {
+                --#{prefix}track-bg: var(--#{$prefix}blue-100);
+                --#{prefix}switch-bg: var(--#{$prefix}blue-300);
+                --#{prefix}track-bg-checked: var(--#{$prefix}blue-300);
+                --#{prefix}switch-bg-checked: var(--#{$prefix}blue-100);
+            }
+
+            &-green {
+                --#{prefix}track-bg: var(--#{$prefix}green-100);
+                --#{prefix}switch-bg: var(--#{$prefix}green-300);
+                --#{prefix}track-bg-checked: var(--#{$prefix}green-300);
+                --#{prefix}switch-bg-checked: var(--#{$prefix}green-100);
+            }
+
+            &-red {
+                --#{prefix}track-bg: var(--#{$prefix}red-100);
+                --#{prefix}switch-bg: var(--#{$prefix}red-300);
+                --#{prefix}track-bg-checked: var(--#{$prefix}red-300);
+                --#{prefix}switch-bg-checked: var(--#{$prefix}red-100);
+            }
+        }
+    }
+}
