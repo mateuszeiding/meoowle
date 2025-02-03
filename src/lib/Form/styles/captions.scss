@@ -1,7 +1,7 @@
-@use "../../variables/variables";
+@use '/src/config/scss/variables/variables.scss' as *;
 
 %label {
-    color: var(--#{variables.$prefix}body-color-primary);
+    color: var(--#{$prefix}body-color-primary);
     font-weight: 500;
     cursor: pointer;
 }

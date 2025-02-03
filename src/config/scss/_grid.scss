@@ -1,0 +1,31 @@
+@use '/src/config/scss/variables/variables.scss' as *;
+
+.grid-main {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 4.8rem);
+
+    --#{$prefix}gutter: 2.4rem;
+    --#{$prefix}menu-width: 24rem;
+
+    .grid-menu {
+        display: flex;
+        flex-direction: column;
+        min-width: var(--#{$prefix}menu-width);
+        width: var(--#{$prefix}menu-width);
+        background-color: var(--#{$prefix}gray-100);
+        padding: 1.6rem;
+        padding-bottom: 3.2rem;
+        border-right: 1px solid var(--#{$prefix}border-color);
+    }
+
+    .grid-container {
+        width: var(--#{$prefix}container-width);
+        padding: var(--#{$prefix}padding-horizontal);
+    }
+}
+
+.grid-container {
+    --#{$prefix}container-width: 100%;
+    --#{$prefix}padding-horizontal: calc(var(--#{$prefix}gutter) / 2);
+}

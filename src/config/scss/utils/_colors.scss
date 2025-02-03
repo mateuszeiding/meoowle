@@ -1,0 +1,13 @@
+@use '/src/config/scss/variables/variables.scss' as *;
+
+@each $value in $grays {
+    .text-#{$value} {
+        color: var(--#{$prefix}#{$value});
+    }
+}
+
+@each $value in $grays {
+    .bg-#{$value} {
+        background-color: var(--#{$prefix}#{$value});
+    }
+}

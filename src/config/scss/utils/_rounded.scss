@@ -1,30 +1,30 @@
-@use "../variables/spacing";
+@use '/src/config/scss/variables/variables.scss' as *;
 
 :root {
-    @each $key, $value in spacing.$spacers {
+    @each $key, $value in $spacers {
         .r-#{$key} {
             border-radius: #{$value}rem !important;
         }
     }
-    @each $key, $value in spacing.$spacers {
+    @each $key, $value in $spacers {
         .r-top-right-#{$key} {
             border-top-right-radius: #{$value}rem !important;
         }
     }
 
-    @each $key, $value in spacing.$spacers {
+    @each $key, $value in $spacers {
         .r-top-left-#{$key} {
             border-top-left-radius: #{$value}rem !important;
         }
     }
 
-    @each $key, $value in spacing.$spacers {
+    @each $key, $value in $spacers {
         .r-bottom-right-#{$key} {
             border-bottom-right-radius: #{$value}rem !important;
         }
     }
 
-    @each $key, $value in spacing.$spacers {
+    @each $key, $value in $spacers {
         .r-bottom-left-#{$key} {
             border-bottom-left-radius: #{$value}rem !important;
         }

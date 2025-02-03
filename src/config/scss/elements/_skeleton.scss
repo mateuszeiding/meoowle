@@ -1,8 +1,8 @@
-@use "../variables/variables";
+@use '/src/config/scss/variables/variables.scss' as *;
 
 .skeleton {
     position: relative;
-    background-color: var(--#{variables.$prefix}gray-400);
+    background-color: var(--#{$prefix}gray-400);
     overflow: hidden;
 
     &::after {
@@ -18,10 +18,10 @@
         animation-timing-function: linear;
         background: linear-gradient(
             to right,
-            var(--#{variables.$prefix}gray-400) 00%,
-            var(--#{variables.$prefix}gray-600) 45%,
-            var(--#{variables.$prefix}gray-600) 55%,
-            var(--#{variables.$prefix}gray-400) 100%
+            var(--#{$prefix}gray-400) 00%,
+            var(--#{$prefix}gray-600) 45%,
+            var(--#{$prefix}gray-600) 55%,
+            var(--#{$prefix}gray-400) 100%
         );
         opacity: 0.4;
     }

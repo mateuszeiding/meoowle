@@ -1,0 +1,21 @@
+@use '/src/config/scss/variables/variables.scss' as *;
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 0.2rem solid var(--#{$prefix}body-bg);
+    box-sizing: content-box;
+    border-radius: 0.4rem;
+    background-color: var(--#{$prefix}scrollbar-thumb-bg);
+    opacity: 0.2;
+
+    &:hover {
+        background-color: var(--#{$prefix}scrollbar-thumb-bg-hover);
+    }
+}

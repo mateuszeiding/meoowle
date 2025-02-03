@@ -1,0 +1,64 @@
+@use '/src/config/scss/variables/variables.scss' as *;
+
+:root {
+    // global
+    @each $key, $value in $light-mode {
+        --#{$prefix}#{$key}: #{$value};
+    }
+
+    @each $key, $value in $reds {
+        --#{$prefix}#{$key}: #{$value};
+    }
+
+    @each $key, $value in $blues {
+        --#{$prefix}#{$key}: #{$value};
+    }
+
+    @each $key, $value in $greens {
+        --#{$prefix}#{$key}: #{$value};
+    }
+
+    // body
+    --#{$prefix}body-bg: var(--#{$prefix}gray-000);
+    --#{$prefix}body-color-primary: var(--#{$prefix}gray-900);
+    --#{$prefix}body-color-secondary: var(--#{$prefix}gray-800);
+
+    // borders
+    --#{$prefix}border-width: 1px;
+    --#{$prefix}border-color: var(--#{$prefix}gray-200);
+    --#{$prefix}border-color-light: var(--#{$prefix}gray-400);
+    --#{$prefix}border-color-light-hover: var(--#{$prefix}gray-500);
+    --#{$prefix}shadow-color: var(--#{$prefix}gray-200);
+    --#{$prefix}shadow-color-hover: var(--#{$prefix}gray-300);
+
+    --#{$prefix}scrollbar-thumb-bg: #0080ff20;
+    --#{$prefix}scrollbar-thumb-bg-hover: #0080ff40;
+
+    --#{$prefix}skeleton-wave-rgba-center: rgba(140, 140, 170, 0.9);
+    --#{$prefix}skeleton-wave-rgba-not-center: rgba(168, 168, 200, 0);
+}
+
+:root[thank-you-for-saving-my-eyes='true'] {
+    // global
+    @each $key, $value in $dark-mode {
+        --#{$prefix}#{$key}: #{$value};
+    }
+
+    // body
+    --#{$prefix}body-bg: var(--#{$prefix}gray-000);
+    --#{$prefix}body-color-primary: var(--#{$prefix}gray-900);
+    --#{$prefix}body-color-secondary: var(--#{$prefix}gray-800);
+
+    // borders
+    --#{$prefix}border-color: var(--#{$prefix}gray-300);
+    --#{$prefix}border-color-light: var(--#{$prefix}gray-500);
+    --#{$prefix}border-color-light-hover: var(--#{$prefix}gray-600);
+    --#{$prefix}shadow-color: var(--#{$prefix}gray-200);
+    --#{$prefix}shadow-color-hover: var(--#{$prefix}gray-300);
+
+    --#{$prefix}scrollbar-thumb-bg: #0080ff40;
+    --#{$prefix}scrollbar-thumb-bg-hover: #0080ff60;
+
+    --#{$prefix}skeleton-wave-rgba-center: rgba(23, 23, 37, 0.2);
+    --#{$prefix}skeleton-wave-rgba-not-center: rgba(32, 32, 58, 0);
+}

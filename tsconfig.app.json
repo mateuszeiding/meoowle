@@ -3,6 +3,7 @@
 		"baseUrl": ".",
 		"paths": {
 			"@Form": ["src/lib/Form/!Form.import.ts"],
+			"@Buttons": ["src/lib/Buttons/!Buttons.import.ts"],
 			"@Util": ["src/lib/Util/!Util.import.ts"],
 			"@Nav": ["src/lib/Nav/!Nav.import.ts"]
 		},
@@ -28,5 +29,5 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedSideEffectImports": true
 	},
-	"include": ["src"]
+	"include": ["src", "src/config/types"]
 }

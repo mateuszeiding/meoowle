@@ -1,44 +1,12 @@
-import { cls } from "@Util";
+import { ButtonRetro3D } from "@Buttons";
 
 export default function () {
 	return (
 		<nav className="d-flex flex-column g-row-6">
-			<button
-				type="button"
-				className={cls(
-					"btn btn-link btn-justified",
-					"tx-uppercase align-self-end",
-				)}
-			>
-				Settings
-			</button>
-			<button
-				type="button"
-				className={cls(
-					"btn btn-link theme-blue btn-justified",
-					"tx-uppercase align-self-end",
-				)}
-			>
-				Settings
-			</button>
-			<button
-				type="button"
-				className={cls(
-					"btn btn-link theme-green btn-justified",
-					"tx-uppercase align-self-end",
-				)}
-			>
-				Settings
-			</button>
-			<button
-				type="button"
-				className={cls(
-					"btn btn-link theme-red btn-justified",
-					"tx-uppercase align-self-end",
-				)}
-			>
-				Settings
-			</button>
+			<ButtonRetro3D>Default</ButtonRetro3D>
+			<ButtonRetro3D theme="blue">Blue</ButtonRetro3D>
+			<ButtonRetro3D theme="green">Green</ButtonRetro3D>
+			<ButtonRetro3D theme="red">Red</ButtonRetro3D>
 		</nav>
 	);
 }

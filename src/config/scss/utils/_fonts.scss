@@ -1,18 +1,18 @@
-@use "../variables/fonts";
+@use '/src/config/scss/variables/variables.scss' as *;
 
-@each $key, $value in fonts.$font-size {
+@each $key, $value in $font-size {
     .fs-#{$key} {
         font-size: $value !important;
     }
 }
 
-@each $key, $value in fonts.$font-weight {
+@each $key, $value in $font-weight {
     .fw-#{$key} {
         font-weight: $value !important;
     }
 }
 
-@each $key, $value in fonts.$line-height {
+@each $key, $value in $line-height {
     .lh-#{$key} {
         line-height: $value !important;
     }

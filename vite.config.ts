@@ -7,8 +7,21 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			"@Form": path.resolve(__dirname, "./src/lib/Form/!Form.import.ts"),
+			"@Buttons": path.resolve(
+				__dirname,
+				"./src/lib/Buttons/!Buttons.import.ts",
+			),
 			"@Util": path.resolve(__dirname, "./src/lib/Util/!Util.import.ts"),
 			"@Nav": path.resolve(__dirname, "./src/lib/Nav/!Nav.import.ts"),
+		},
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: `
+				@use '/src/config/scss/variables/variables.scss' as *;
+				`,
+			},
 		},
 	},
 });

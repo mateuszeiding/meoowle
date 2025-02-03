@@ -1,7 +1,7 @@
-@use "../variables/spacing";
+@use '/src/config/scss/variables/variables.scss' as *;
 
 :root {
-    @each $key, $value in spacing.$spacers {
+    @each $key, $value in $spacers {
         .m-#{$key} {
             margin: #{$value}rem;
         }

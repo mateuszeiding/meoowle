@@ -1,4 +1,4 @@
-@use "variables/variables";
+@use '/src/config/scss/variables/variables.scss' as *;
 
 html {
     font-size: 62.5%;
@@ -6,8 +6,8 @@ html {
 }
 
 body {
-    background-color: var(--#{variables.$prefix}body-bg);
-    color: var(--#{variables.$prefix}body-color-primary);
+    background-color: var(--#{$prefix}body-bg);
+    color: var(--#{$prefix}body-color-primary);
     font-family: 'Fira Code', monospace;
     line-height: 1.5;
     font-size: 1.6rem;
