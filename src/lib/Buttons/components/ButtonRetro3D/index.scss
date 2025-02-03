@@ -13,7 +13,8 @@
     cursor: pointer;
     transition:
         all 200ms ease-in-out,
-        top 50ms ease-in-out;
+        top 50ms ease-in-out,
+        box-shadow 50ms ease-in-out;
 
     position: relative;
     top: 0;
@@ -28,7 +29,7 @@
             border-color: var(--hover-border-color);
             box-shadow:
                 0 0.6rem var(--hover-shadow-border-color),
-                0 0.8rem rgba(0, 0, 0, 0.4);
+                0 1rem rgba(0, 0, 0, 0.4);
         }
 
         &:focus-visible {
@@ -48,7 +49,7 @@
             border-color: var(--active-border-color);
             box-shadow:
                 0 0.6rem var(--active-shadow-border-color),
-                0 0.2rem rgba(0, 0, 0, 0.4);
+                0 0.4rem rgba(0, 0, 0, 0.4);
         }
     }
 
@@ -87,8 +88,8 @@
         &-red {
             --default-border-color: var(--#{$prefix}red-700);
             --default-shadow-border-color: var(--#{$prefix}red-900);
-            --hover-border-color: var(--#{$prefix}red-600);
-            --hover-shadow-border-color: var(--#{$prefix}red-800);
+            --hover-border-color: var(--#{$prefix}red-500);
+            --hover-shadow-border-color: var(--#{$prefix}red-700);
             --active-border-color: var(--#{$prefix}red-400);
             --active-bg-color: var(--#{$prefix}red-000);
             --active-shadow-border-color: var(--#{$prefix}red-600);
@@ -97,8 +98,8 @@
         &-blue {
             --default-border-color: var(--#{$prefix}blue-700);
             --default-shadow-border-color: var(--#{$prefix}blue-900);
-            --hover-border-color: var(--#{$prefix}blue-600);
-            --hover-shadow-border-color: var(--#{$prefix}blue-800);
+            --hover-border-color: var(--#{$prefix}blue-500);
+            --hover-shadow-border-color: var(--#{$prefix}blue-700);
             --active-border-color: var(--#{$prefix}blue-400);
             --active-bg-color: var(--#{$prefix}blue-000);
             --active-shadow-border-color: var(--#{$prefix}blue-600);
@@ -107,8 +108,8 @@
         &-green {
             --default-border-color: var(--#{$prefix}green-700);
             --default-shadow-border-color: var(--#{$prefix}green-900);
-            --hover-border-color: var(--#{$prefix}green-600);
-            --hover-shadow-border-color: var(--#{$prefix}green-800);
+            --hover-border-color: var(--#{$prefix}green-500);
+            --hover-shadow-border-color: var(--#{$prefix}green-700);
             --active-border-color: var(--#{$prefix}green-400);
             --active-bg-color: var(--#{$prefix}green-000);
             --active-shadow-border-color: var(--#{$prefix}green-600);
