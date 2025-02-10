@@ -1,5 +1,5 @@
-import { RadioInput, SwitchInput } from "@Form";
 import { SideMenu } from "@Nav";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
 	return (
@@ -10,24 +10,7 @@ export default function App() {
 			<section className="grid-container">
 				<div className="row">
 					<div className="col-12">
-						<RadioInput />
-					</div>
-
-					<div className="col-12">
-						<SwitchInput theme="blue" />
-						<SwitchInput theme="blue" thirdDimension />
-					</div>
-					<div className="col-12">
-						<SwitchInput theme="green" />
-						<SwitchInput theme="green" thirdDimension />
-					</div>
-					<div className="col-12">
-						<SwitchInput theme="red" />
-						<SwitchInput theme="red" thirdDimension />
-					</div>
-					<div className="col-12">
-						<SwitchInput />
-						<SwitchInput thirdDimension />
+						<Outlet />
 					</div>
 				</div>
 			</section>

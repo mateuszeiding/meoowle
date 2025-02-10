@@ -14,9 +14,10 @@ export default function ({ ...props }: Props) {
 				"btn btn-link btn-justified",
 				"tx-uppercase align-self-end",
 				`theme-${props.theme ?? "default"}`,
+				props.className,
 			)}
 		>
-			{props.children}
+			{props.children ?? <span style={{ color: "transparent" }}>DISABLED</span>}
 		</button>
 	);
 }

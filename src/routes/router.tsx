@@ -1,13 +1,45 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from '../App';
+import {
+	createBrowserRouter,
+	RouterProvider,
+	type RouteObject,
+} from "react-router-dom";
+import App from "../App";
+import ToggleSwitchRoute from "./root/elements/form/ToggleSwitch.route";
+
+export const routerObj: RouteObject[] = [
+	{
+		path: "/",
+		element: <App />,
+		children: [
+			{
+				path: "elements",
+				children: [
+					{
+						path: "form",
+						children: [
+							{
+								path: "toggle-switch",
+								element: <ToggleSwitchRoute />,
+							},
+							{
+								path: "radio-button",
+							},
+							{
+								path: "text-input",
+							},
+							{
+								path: "textarea",
+							},
+						],
+					},
+				],
+			},
+		],
+	},
+];
 
 export default function Router() {
-    const router = createBrowserRouter([
-        {
-            path: '/',
-            element: <App />
-        }
-    ])
+	const router = createBrowserRouter(routerObj);
 
-    return <RouterProvider router={router} />
+	return <RouterProvider router={router} />;
 }
