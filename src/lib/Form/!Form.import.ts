@@ -1,3 +1,3 @@
 export * from "./styles/_import.scss";
-export { default as RadioInput } from "./components/Radio/index";
-export { default as SwitchInput } from "./components/Switch/index";
+export { default as RadioButton } from "./components/Radio/index";
+export { default as ToggleSwitch} from "./components/Switch/index";
