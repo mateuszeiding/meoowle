@@ -1,0 +1,91 @@
+$bg: --#{prefix}bg;
+$border-color: --#{prefix}border-color;
+$dot-color: --#{prefix}dot-color;
+
+.form-check-input[type='radio'] {
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 1.2rem;
+    background-color: var(#{$bg});
+    border: 1px solid var(#{$border-color});
+
+    &:before {
+        content: '';
+        position: absolute;
+        transition: all 0.15s ease-in-out;
+        background-color: var(#{$dot-color});
+    }
+
+    &:hover::before {
+        top: 0.5rem;
+        left: 0.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 0.6rem;
+    }
+
+    &:checked::before {
+        top: 0.3rem;
+        left: 0.3rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 1.2rem;
+    }
+
+    &.theme {
+        &-default {
+            #{$bg}: var(--#{$prefix}gray-200);
+            #{$border-color}: var(--#{$prefix}gray-400);
+
+            &:hover {
+                #{$dot-color}: var(--#{$prefix}gray-400);
+            }
+
+            &:checked {
+                #{$dot-color}: var(--#{$prefix}gray-500);
+            }
+        }
+
+        &-blue {
+            #{$bg}: var(--#{$prefix}blue-000);
+            #{$border-color}: var(--#{$prefix}blue-300);
+
+            &:hover {
+                #{$dot-color}: var(--#{$prefix}blue-100);
+            }
+
+            &:checked {
+                #{$dot-color}: var(--#{$prefix}blue-300);
+            }
+        }
+
+        &-green {
+            #{$bg}: var(--#{$prefix}green-000);
+            #{$border-color}: var(--#{$prefix}green-300);
+
+            &:hover {
+                #{$dot-color}: var(--#{$prefix}green-200);
+            }
+
+            &:checked {
+                #{$dot-color}: var(--#{$prefix}green-300);
+            }
+        }
+
+        &-red {
+            #{$bg}: var(--#{$prefix}red-000);
+            #{$border-color}: var(--#{$prefix}red-300);
+
+            &:hover {
+                #{$dot-color}: var(--#{$prefix}red-200);
+            }
+
+            &:checked {
+                #{$dot-color}: var(--#{$prefix}red-300);
+            }
+        }
+    }
+}

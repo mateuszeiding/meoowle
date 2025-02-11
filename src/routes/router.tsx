@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import App from "../App";
 import ToggleSwitchRoute from "./root/elements/form/ToggleSwitch.route";
+import RadioButtonRoute from "./root/elements/form/RadioButton.route";
 
 export const routerObj: RouteObject[] = [
 	{
@@ -23,6 +24,7 @@ export const routerObj: RouteObject[] = [
 							},
 							{
 								path: "radio-button",
+								element: <RadioButtonRoute />,
 							},
 							{
 								path: "text-input",
