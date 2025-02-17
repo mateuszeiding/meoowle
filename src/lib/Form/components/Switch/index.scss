@@ -2,6 +2,7 @@
 
 $track-bg: --#{prefix}track-bg;
 $switch-bg: --#{prefix}switch-bg;
+$border-color: --#{prefix}border-color;
 
 .form-check-input[type='checkbox'][role='switch'] {
     appearance: none;
@@ -11,12 +12,13 @@ $switch-bg: --#{prefix}switch-bg;
     width: 4.8rem;
     border-radius: 0.6rem;
     background-color: var(#{$track-bg});
+    border: 1px solid var(#{$border-color});
 
     &::before {
         content: '';
         position: absolute;
-        top: 0.4rem;
-        left: 0.4rem;
+        top: 0.3rem;
+        left: 0.3rem;
         width: 1.6rem;
         height: 1.6rem;
         border-radius: 0.4rem;
@@ -25,20 +27,17 @@ $switch-bg: --#{prefix}switch-bg;
     }
 
     &:hover::before {
-        top: -0.2rem;
-        left: -0.2rem;
+        top: -0.3rem;
+        left: -0.3rem;
         width: 2.8rem;
         height: 2.8rem;
         border-radius: 0.6rem;
     }
 
     &:checked {
-        background-color: var(#{$switch-bg});
-
         &::before {
             transition: all 0.15s ease-in-out;
             left: 2.8rem;
-            background-color: var(#{$switch-bg});
         }
 
         &:hover::before {
@@ -50,51 +49,76 @@ $switch-bg: --#{prefix}switch-bg;
         &-default {
             #{$track-bg}: var(--#{$prefix}gray-200);
             #{$switch-bg}: var(--#{$prefix}gray-400);
-
-            &:hover {
-                #{$track-bg}: var(--#{$prefix}gray-300);
-                #{$switch-bg}: var(--#{$prefix}gray-300);
-            }
+            #{$border-color}: var(--#{$prefix}gray-400);
 
             &:checked {
                 #{$track-bg}: var(--#{$prefix}gray-400);
                 #{$switch-bg}: var(--#{$prefix}gray-200);
             }
+
+            &:hover {
+                #{$switch-bg}: var(--#{$prefix}gray-300);
+
+                &:checked {
+                    #{$switch-bg}: var(--#{$prefix}gray-300);
+                }
+            }
         }
 
         &-blue {
-            --#{prefix}track-bg: var(--#{$prefix}blue-000);
-            --#{prefix}switch-bg: var(--#{$prefix}blue-300);
-            --#{prefix}track-bg-checked: var(--#{$prefix}blue-300);
-            --#{prefix}switch-bg-checked: var(--#{$prefix}blue-000);
+            #{$track-bg}: var(--#{$prefix}blue-000);
+            #{$switch-bg}: var(--#{$prefix}blue-300);
+            #{$border-color}: var(--#{$prefix}blue-300);
+
+            &:checked {
+                #{$track-bg}: var(--#{$prefix}blue-300);
+                #{$switch-bg}: var(--#{$prefix}blue-000);
+            }
 
             &:hover {
-                --#{prefix}switch-bg: var(--#{$prefix}blue-200);
-                --#{prefix}switch-bg-checked: var(--#{$prefix}blue-100);
+                #{$switch-bg}: var(--#{$prefix}blue-200);
+
+                &:checked {
+                    #{$switch-bg}: var(--#{$prefix}blue-100);
+                }
             }
         }
 
         &-green {
-            --#{prefix}track-bg: var(--#{$prefix}green-000);
-            --#{prefix}switch-bg: var(--#{$prefix}green-300);
-            --#{prefix}track-bg-checked: var(--#{$prefix}green-300);
-            --#{prefix}switch-bg-checked: var(--#{$prefix}green-000);
+            #{$track-bg}: var(--#{$prefix}green-000);
+            #{$switch-bg}: var(--#{$prefix}green-300);
+            #{$border-color}: var(--#{$prefix}green-300);
+
+            &:checked {
+                #{$track-bg}: var(--#{$prefix}green-300);
+                #{$switch-bg}: var(--#{$prefix}green-000);
+            }
 
             &:hover {
-                --#{prefix}switch-bg: var(--#{$prefix}green-200);
-                --#{prefix}switch-bg-checked: var(--#{$prefix}green-100);
+                #{$switch-bg}: var(--#{$prefix}green-200);
+
+                &:checked {
+                    #{$switch-bg}: var(--#{$prefix}green-100);
+                }
             }
         }
 
         &-red {
-            --#{prefix}track-bg: var(--#{$prefix}red-000);
-            --#{prefix}switch-bg: var(--#{$prefix}red-300);
-            --#{prefix}track-bg-checked: var(--#{$prefix}red-300);
-            --#{prefix}switch-bg-checked: var(--#{$prefix}red-000);
+            #{$track-bg}: var(--#{$prefix}red-000);
+            #{$switch-bg}: var(--#{$prefix}red-300);
+            #{$border-color}: var(--#{$prefix}red-300);
+
+            &:checked {
+                #{$track-bg}: var(--#{$prefix}red-300);
+                #{$switch-bg}: var(--#{$prefix}red-000);
+            }
 
             &:hover {
-                --#{prefix}switch-bg: var(--#{$prefix}red-200);
-                --#{prefix}switch-bg-checked: var(--#{$prefix}red-100);
+                #{$switch-bg}: var(--#{$prefix}red-200);
+
+                &:checked {
+                    #{$switch-bg}: var(--#{$prefix}red-100);
+                }
             }
         }
     }
@@ -104,7 +128,8 @@ $switch-bg: --#{prefix}switch-bg;
         width: 4.8rem;
         border: 4px solid var(--#{prefix}border-color);
         border-top: 4px solid var(--#{prefix}border-color);
-        box-shadow: inset 0 4px var(--#{prefix}shadow-border-color),
+        box-shadow:
+            inset 0 4px var(--#{prefix}shadow-border-color),
             inset 0 8px rgba(0, 0, 0, 0.4);
 
         &::before {
@@ -112,7 +137,8 @@ $switch-bg: --#{prefix}switch-bg;
             left: 0.2rem;
             width: 1.6rem;
             height: 1.6rem;
-            box-shadow: 0 4px var(--#{prefix}switch-side-color),
+            box-shadow:
+                0 4px var(--#{prefix}switch-side-color),
                 0 6px rgba(0, 0, 0, 0.4);
         }
 
@@ -122,7 +148,8 @@ $switch-bg: --#{prefix}switch-bg;
             width: 1.6rem;
             height: 1.6rem;
             border-radius: 0.4rem;
-            box-shadow: 0 2px var(--#{prefix}switch-side-color),
+            box-shadow:
+                0 2px var(--#{prefix}switch-side-color),
                 0 4px rgba(0, 0, 0, 0.4);
         }
 
