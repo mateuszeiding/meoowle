@@ -1,8 +1,8 @@
 @use '/src/config/scss/variables/variables.scss' as *;
 
-$track-bg: --#{prefix}track-bg;
-$switch-bg: --#{prefix}switch-bg;
-$border-color: --#{prefix}border-color;
+$track-bg: --#{$prefix}track-bg;
+$switch-bg: --#{$prefix}switch-bg;
+$border-color: --#{$prefix}border-color;
 
 .form-check-input[type='checkbox'][role='switch'] {
     appearance: none;
@@ -126,10 +126,10 @@ $border-color: --#{prefix}border-color;
     &.third-dimension {
         height: 2.8rem;
         width: 4.8rem;
-        border: 4px solid var(--#{prefix}border-color);
-        border-top: 4px solid var(--#{prefix}border-color);
+        border: 4px solid var(--#{$prefix}border-color);
+        border-top: 4px solid var(--#{$prefix}border-color);
         box-shadow:
-            inset 0 4px var(--#{prefix}shadow-border-color),
+            inset 0 4px var(--#{$prefix}shadow-border-color),
             inset 0 8px rgba(0, 0, 0, 0.4);
 
         &::before {
@@ -138,7 +138,7 @@ $border-color: --#{prefix}border-color;
             width: 1.6rem;
             height: 1.6rem;
             box-shadow:
-                0 4px var(--#{prefix}switch-side-color),
+                0 4px var(--#{$prefix}switch-side-color),
                 0 6px rgba(0, 0, 0, 0.4);
         }
 
@@ -149,7 +149,7 @@ $border-color: --#{prefix}border-color;
             height: 1.6rem;
             border-radius: 0.4rem;
             box-shadow:
-                0 2px var(--#{prefix}switch-side-color),
+                0 2px var(--#{$prefix}switch-side-color),
                 0 4px rgba(0, 0, 0, 0.4);
         }
 
@@ -162,42 +162,42 @@ $border-color: --#{prefix}border-color;
 
         &.theme {
             &-default {
-                --#{prefix}border-color: var(--#{$prefix}gray-800);
-                --#{prefix}shadow-border-color: var(--#{$prefix}gray-900);
-                --#{prefix}switch-side-color: var(--#{$prefix}gray-700);
+                --#{$prefix}border-color: var(--#{$prefix}gray-800);
+                --#{$prefix}shadow-border-color: var(--#{$prefix}gray-900);
+                --#{$prefix}switch-side-color: var(--#{$prefix}gray-700);
 
                 &:hover {
-                    --#{prefix}switch-side-color: var(--#{$prefix}gray-600);
+                    --#{$prefix}switch-side-color: var(--#{$prefix}gray-600);
                 }
             }
 
             &-blue {
-                --#{prefix}border-color: var(--#{$prefix}blue-800);
-                --#{prefix}shadow-border-color: var(--#{$prefix}blue-900);
-                --#{prefix}switch-side-color: var(--#{$prefix}blue-500);
+                --#{$prefix}border-color: var(--#{$prefix}blue-800);
+                --#{$prefix}shadow-border-color: var(--#{$prefix}blue-900);
+                --#{$prefix}switch-side-color: var(--#{$prefix}blue-500);
 
                 &:hover {
-                    --#{prefix}switch-side-color: var(--#{$prefix}blue-400);
+                    --#{$prefix}switch-side-color: var(--#{$prefix}blue-400);
                 }
             }
 
             &-green {
-                --#{prefix}border-color: var(--#{$prefix}green-800);
-                --#{prefix}shadow-border-color: var(--#{$prefix}green-900);
-                --#{prefix}switch-side-color: var(--#{$prefix}green-500);
+                --#{$prefix}border-color: var(--#{$prefix}green-800);
+                --#{$prefix}shadow-border-color: var(--#{$prefix}green-900);
+                --#{$prefix}switch-side-color: var(--#{$prefix}green-500);
 
                 &:hover {
-                    --#{prefix}switch-side-color: var(--#{$prefix}green-400);
+                    --#{$prefix}switch-side-color: var(--#{$prefix}green-400);
                 }
             }
 
             &-red {
-                --#{prefix}border-color: var(--#{$prefix}red-800);
-                --#{prefix}shadow-border-color: var(--#{$prefix}red-900);
-                --#{prefix}switch-side-color: var(--#{$prefix}red-500);
+                --#{$prefix}border-color: var(--#{$prefix}red-800);
+                --#{$prefix}shadow-border-color: var(--#{$prefix}red-900);
+                --#{$prefix}switch-side-color: var(--#{$prefix}red-500);
 
                 &:hover {
-                    --#{prefix}switch-side-color: var(--#{$prefix}red-400);
+                    --#{$prefix}switch-side-color: var(--#{$prefix}red-400);
                 }
             }
         }

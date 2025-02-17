@@ -20,6 +20,7 @@ export default function (props: Props) {
 				"form-check-input",
 				props.thirdDimension && "third-dimension",
 				`theme-${props.theme ?? "default"}`,
+				props.className,
 			)}
 		/>
 	);

@@ -15,6 +15,7 @@ export default function (props: Props) {
 			className={cls(
 				"form-check-input",
 				`theme-${props.theme ?? "default"}`,
+				props.thirdDimension && "third-dimension",
 				props.className,
 			)}
 		/>
